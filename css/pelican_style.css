@@ -1,0 +1,398 @@
+html,
+body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+#map {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    width: 100%
+}
+#togglebar {
+    top: 90px;
+    right: 15px;
+    position: absolute;
+    z-index: 20;
+    padding: 10px;
+    background-color: #b9b9b9;
+    border-radius: 3px 3px 3px 3px;
+    box-shadow: 5px -5px 5px 0px rgba(0, 0, 0, 0.4);
+    font-family: arial;
+}
+#BasemapToggle {
+    position: absolute;
+    bottom: 8vmin;
+    right: 2vmin;
+    z-index: 50;
+    box-shadow: .5vmin -.5vmin .5vmin 0vmin rgba(0, 0, 0, 0.4);
+}
+.attrTable {
+    color: white;
+    font-size: 13px;
+}
+#info {
+    display: none;
+    background-color: #44413A;
+    left: 0;
+    padding-left: 0;
+    padding-top: 2.7vmin;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    border-top: .2vmin solid #ccbda6;
+    border-bottom: .2vmin solid #ccbda6;
+    border-right: .2vmin solid #ccbda6;
+    border-top-right-radius: 2vmin;
+    border-bottom-right-radius: 2vmin;
+    overflow: auto;
+    max-height: 65vh;
+    max-width: 35vmin;
+    box-shadow: 1.5vmin -1vmin .5vmin 0px rgba(0, 0, 0, 0.4);
+    float: left;
+}
+#lwrap {
+    position: absolute;
+    background: transparent;
+    left: 0;
+    top: 70%;
+    transform: translate(0, -50%);
+    height: auto;
+    width: auto;
+}
+#legendToggle {
+    background-color: #44413A;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    color: #ccbda6;
+    padding: 1vmin;
+    font-size: 1.5vmin;
+    bottom: 50%;
+    border-top: .2vmin solid #ccbda6;
+    border-left: .2vmin solid #ccbda6;
+    border-right: .2vmin solid #ccbda6;
+    border-top-right-radius: 2vmin;
+    border-top-left-radius: 2vmin;
+    box-shadow: -1vmin -1vmin 0.5vmin 0px rgba(0, 0, 0, 0.4);
+    margin-left: -4.3vmin;
+    text-align: center;
+    white-space: nowrap;
+}
+#legendToggle:hover {
+    cursor: pointer;
+    color: #44413A;
+    ;
+    background-color: #ccbda6;
+}
+#toggle {
+    position: absolute;
+    top: 13vmin;
+    right: 2vmin;
+}
+#lHide {
+    width: 100%;
+    margin-top: 1vmin;
+    font-size: 1.75vmin;
+    text-align: center;
+    color: #ccbda6;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    padding-bottom: 1.5vmin;
+    font-weight: bold;
+}
+#lHide:hover {
+    cursor: pointer;
+    color: #44413A;
+    ;
+    background-color: #ccbda6;
+}
+.verticaltext {
+    transform: rotate(90deg);
+    transform-origin: right, top;
+    -ms-transform: rotate(90deg);
+    -ms-transform-origin: right, top;
+    -webkit-transform: rotate(90deg);
+    -webkit-transform-origin: right, top;
+    position: absolute;
+}
+.ui-button-text {
+    font-size: 1.5vmin;
+}
+.ui-button-text-only .ui-button-text {
+    padding: 1vmin;
+}
+.ui-button .ui-button-text {
+    line-height: 50%;
+}
+#toggle .ui-button-text {
+    font-size: 1.3vmin;
+}
+#toggle .ui-button {
+    height: 3vmin;
+    line-height: 100%;
+}
+#info .ui-button {
+    display: block;
+    margin: 0 auto 1vmin auto;
+    width: 13vmin;
+}
+#navBar {
+    top: 6vmin;
+    position: absolute;
+    padding: 0px;
+    z-index: 10;
+    background: #44413A;
+    background-repeat: repeat-x;
+    width: 100%;
+    height: 4.5vmin;
+    border-top: 1px solid #ccbda6;
+    border-bottom: 1px solid #ccbda6;
+    box-shadow: 0px 1vmin 1vmin rgba(0, 0, 0, 0.50);
+}
+#MBLogo {
+    position: absolute;
+    bottom: 2vmin;
+    right: 12vmin;
+    height: 5vmin;
+}
+#DWRlogo {
+    top: -0.8vmin;
+    right: 3vmin;
+    height: 6.5vmin;
+    width: 5.5vmin;
+    position: absolute;
+    border: 0px;
+    border-bottom-right-radius: 1vmin;
+    border-bottom-left-radius: 1vmin;
+}
+#titleNav {
+    top: 1.2vmin;
+    left: 20vmin;
+    position: absolute;
+    display: inline-block;
+    font-family: arial;
+    white-space: nowrap;
+    color: #ccbda6;
+    height: 100%;
+    margin: 0;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5vmin;
+}
+#mainNav {
+    top: 2.25vmin;
+    right: 7vmin;
+    position: absolute;
+    display: inline-block;
+    font-family: arial;
+    white-space: nowrap;
+    color: #ccbda6;
+    margin: 0;
+    transform: translate(-50%, -50%);
+    font-size: 1.75vmin;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 1vmin;
+}
+#mainNav:hover {
+    cursor: pointer;
+    color: #4b352c;
+    background-color: #ccbda6;
+}
+.active {
+    color: #4b352c ! important;
+    background-color: #ccbda6;
+}
+.subMenu {
+    z-index: 20;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+    font-family: arial;
+    color: #ccbda6;
+    background-color: #4b352c;
+    border-radius: 2px 2px 2px 2px;
+    box-shadow: 1.5vmin -1vmin .5vmin 0px rgba(0, 0, 0, 0.4);
+}
+.subMenu ul {
+    margin: 0px;
+    padding: 0px;
+}
+#submenuAbout {
+    display: none;
+    position: absolute;
+    top: 25vh;
+    left: 25vw;
+    z-index: 10;
+    padding: 2.2vmin;
+    max-width: 40vw;
+    background-color: #44413A;
+    border-top: 1px solid #ccbda6;
+    border-left: 1px solid #ccbda6;
+    border-bottom: 1px solid #ccbda6;
+    border-right: 1px solid #ccbda6;
+    font-size: 1.75vmin;
+    max-height: 60vh;
+    overflow: auto;
+}
+#submenuAbout ul {
+    list-style-type: square;
+    list-style-position: inside;
+}
+#submenuGlossary li {
+    padding: 5px;
+}
+#distances {
+    display: none;
+    z-index: 10;
+    position: absolute;
+    top: 13vmin;
+    left: 18vmin;
+    padding: 1.5vmin;
+    background-color: #44413A;
+    border-top: 1px solid #ccbda6;
+    border-left: 1px solid #ccbda6;
+    border-bottom: 1px solid #ccbda6;
+    border-right: 1px solid #ccbda6;
+    font-size: 1.5vmin;
+}
+#overlay {
+    display: none;
+    background: #44413A;
+    float: left;
+    padding: 1.5vmin;
+    color: #ccbda6;
+    padding-bottom: 2vmin;
+}
+#legend {
+    display: inline-block;
+    background: #44413A;
+    float: left;
+    padding-left: 1.5vmin;
+}
+#HomeButton {
+    height: 3vmin;
+    width: 3vmin;
+    position: absolute;
+    top: 23.25vmin;
+    left: 2vmin;
+    z-index: 50;
+}
+#load {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: #141414;
+    color: white;
+    z-index: 9;
+}
+#loadgif {
+    height: 20vmin;
+    width: 28vmin;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+.scalebar_bottom-left {
+    bottom: 4.5vmin;
+}
+.esriLegendLayer {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+table {
+    color: #ccbda6;
+    font-size: 1.7vmin;
+}
+.esriSimpleSlider {
+    height: 7vmin;
+    position: absolute;
+    top: 16vmin;
+    left: 2vmin;
+    width: 3vmin;
+    background: #44413A;
+    border: 1px solid #ccbda6;
+    color: #ccbda6;
+}
+.esriSimpleSliderVertical .esriSimpleSliderIncrementButton {
+    border-bottom: .2vmin solid #ccbda6;
+    position: relative;
+    left: 0;
+    top: 0;
+}
+.esriSimpleSlider div {
+    width: 100%;
+    height: 50%;
+    font-size: 2vmin;
+    line-height: 150%;
+}
+.BasemapToggle .basemapTitle {
+    font-size: 1vmin;
+    line-height: 100%;
+    padding: .2vmin 5%;
+    border-radius: 0 0 .2vmin .2vmin;
+}
+.BasemapToggle .basemapImage {
+    width: 7vmin;
+    height: 7vmin;
+}
+.HomeButton .home {
+    padding: 0;
+    width: 3vmin;
+    height: 3vmin;
+    border-radius: .5vmin;
+    background-size: 65%;
+    border: 1px solid #ccbda6;
+    background-color: #44413A;
+}
+.esriControlsBR {
+    right: 0.5vmin;
+    bottom: 0.3vmin;
+}
+.esriAttribution {
+    font-size: 1.2vmin;
+    line-height: 1.5vmin;
+    padding: 0 0.4vmin;
+    margin: 0 .5vmin 0 0;
+}
+.esriScaleBar {
+    width: 4vmin;
+    height: 2vmin
+}
+#helpIMG {
+    position: absolute;
+    top: 0;
+    right: 0.5vmin;
+    top: 0.5vmin;
+}
+#helpIMG:hover {
+    cursor: help;
+}
+#help {
+    height: 2.5vmin;
+    width: 2.5vmin;
+}
+#header {
+    position: absolute;
+    z-index: 7;
+    top: 0px;
+    height: 100px;
+    width: 100%;
+}
+#peli {
+    position: absolute;
+    left: 2vmin;
+    top: -1.2vmin;
+    height: 7vmin;
+    width: 8vmin;
+}
+#utahgov_statewideheader {
+    z-index: 10;
+    width: 100%;
+    position: absolute !important;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+    #utahgov_statewideheader {
+        display: none;
+    }
+}

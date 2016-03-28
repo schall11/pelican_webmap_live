@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Utah DWR PeliTrack</title>
+    <link rel="stylesheet" href="http://js.arcgis.com/3.15/esri/css/esri.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="css/pelican_style.css">
+</head>
+
+<body>
+    <script type="text/javascript" src="https://secure.utah.gov/nav/fluidheader.js"></script>
+    <div id="load"><img id="loadgif" src="images/load_f.gif" alt="loading..."></div>
+    <div id="navBar">
+        <div id="titleNav"><b><h2>Utah DWR PeliTrack</h2></b></div>
+        <a href="/blog/2016/round-trip-flights-salt-lake-city-to-mazatlan/" target="_blank"><div id="mainNav">About</div></a>
+        <a href="/" target="_blank"><img id="DWRlogo" src="images/DWR_logo_small.png" alt="DWR Logo" title="Utah DWR Home Page"></a>
+        <img id="peli" src="images/pelican_fly.png">
+    </div>
+    <div id="map"></div>
+    <div id="lwrap">
+        <div id="info">
+            <div id="legend"></div>
+            <div id="lHide">Hide</div>
+        </div>
+        <div id="legendToggle" class="verticaltext"><b>Show Legend</b></div>
+    </div>
+
+    <div id="BasemapToggle"></div>
+    <form>
+        <div id="toggle">
+            <input type="checkbox" id="trackToggle"><label for="trackToggle">Only Show Last 7 Days</label>
+        </div>
+        
+        
+        <a href="http://www.movebank.org" target="_blank"><img id="MBLogo" src="images/logo_movebank.png" alt="DWR Logo" title="Movebank.org"></a>
+    </form>
+    <div id="HomeButton"></div>
+    
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script src="http://js.arcgis.com/3.15/"></script>
+<script src="scripts/pelican_js.js"></script>
+</html>
