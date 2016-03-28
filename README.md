@@ -1,1 +1,0 @@
-# pelican_webmap_live
